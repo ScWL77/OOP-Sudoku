@@ -14,11 +14,13 @@ public class Cell extends JTextField{
 	   //  to be chosen based on CellStatus
 	   public static final Color BG_GIVEN = new Color(240, 240, 240); // RGB
 	   public static final Color FG_GIVEN = Color.BLACK;
-	   public static final Color FG_NOT_GIVEN = Color.GRAY;
-	   public static final Color BG_TO_GUESS  = Color.YELLOW;
-	   public static final Color BG_CORRECT_GUESS = new Color(0, 216, 0);
-	   public static final Color BG_WRONG_GUESS   = new Color(216, 0, 0);
-	   public static final Font FONT_NUMBERS = new Font("OCR A Extended", Font.PLAIN, 28);
+	  // public static final Color FG_NOT_GIVEN = Color.GRAY;
+	   public static final Color BG_TO_GUESS  = new Color(253,253,150);
+	   public static final Color BG_CORRECT_GUESS = new Color(119,221,119);
+	   public static final Color BG_WRONG_GUESS   = new Color(250, 160, 160);
+	   public static final Color BG_HINT = new Color(240, 240, 240);
+	   public static final Color FG_HINT = new Color(50,205,50);
+	   public static final Font FONT_NUMBERS = new Font("Arial", Font.PLAIN, 28);
 
 	   // Define properties (package-visible)
 	   /** The row and column number [0-8] of this cell */
@@ -58,11 +60,22 @@ public class Cell extends JTextField{
 	         super.setText("");
 	         super.setEditable(true);
 	         super.setBackground(BG_TO_GUESS);
-	         super.setForeground(FG_NOT_GIVEN);
+	         super.setForeground(FG_GIVEN);
 	      } else if (status == CellStatus.CORRECT_GUESS) {  // from TO_GUESS
 	         super.setBackground(BG_CORRECT_GUESS);
+	         super.setForeground(FG_GIVEN);
 	      } else if (status == CellStatus.WRONG_GUESS) {    // from TO_GUESS
 	         super.setBackground(BG_WRONG_GUESS);
+	         super.setForeground(FG_GIVEN);
+	      } else if (status == CellStatus.HINT) {
+	    	  super.setText(number + "");
+	    	  super.setEditable(false);
+	    	  super.setBackground(BG_HINT);
+		      super.setForeground(FG_HINT);
 	      }
 	   }
+
+	public CellStatus getStatus() {
+		return status;
+	}
 }

@@ -1,5 +1,5 @@
 package sudoku;
-import java.util.Random;
+
 /**
  * The Sudoku number puzzle to be solved
  */
@@ -9,13 +9,19 @@ public class Puzzle {
 	   int[][] numbers = new int[GameBoardPanel.GRID_SIZE][GameBoardPanel.GRID_SIZE];
 	   // The clues - isGiven (no need to guess) or need to guess
 	   boolean[][] isGiven = new boolean[GameBoardPanel.GRID_SIZE][GameBoardPanel.GRID_SIZE];
+       private String difficulty;
 
 	   // Constructor
-	   public Puzzle() {
+	   public Puzzle(String difficulty) {
 	      super();
+          this.difficulty = difficulty;
 	   }
 
-	   // Generate a new puzzle given the number of cells to be guessed, which can be used
+    public int[][] getNumbers() {
+        return numbers;
+    }
+
+    // Generate a new puzzle given the number of cells to be guessed, which can be used
 	   //  to control the difficulty level.
 	   // This method shall set (or update) the arrays numbers and isGiven
 	   public void newPuzzle(String difficulty) {
