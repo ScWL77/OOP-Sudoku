@@ -14,4 +14,6 @@ We were tasked with building a Sudoku game on Eclipse based on the basic templat
 - Hints and cheats (reveal a random cell)
 
 # Application Demo
+
+_Audio will not be shown as it is in gif format_
 ![](https://github.com/ScWL77/OOP-Sudoku/blob/main/SudokuDemo.gif)
