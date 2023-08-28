@@ -14,3 +14,4 @@ We were tasked with building a Sudoku game on Eclipse based on the basic templat
 - Hints and cheats (reveal a random cell)
 
 # Application Demo
+![](https://github.com/ScWL77/OOP-Sudoku/blob/main/Sudoku_Demo.gif)
