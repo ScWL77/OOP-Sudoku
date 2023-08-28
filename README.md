@@ -12,3 +12,5 @@ We were tasked with building a Sudoku game on Eclipse based on the basic templat
 - Automatic puzzle generation with various difficulty levels
 - Sound effects, background music, enable/disable sound
 - Hints and cheats (reveal a random cell)
+
+# Application Demo
